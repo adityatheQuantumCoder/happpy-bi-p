@@ -179,12 +179,10 @@ audio {
 	z-index: 9999; /* bring above balloons */
 	text-align: center;
 }
-
-#light_candle {
-	display: none;
-	position: relative;
-	z-index: 10000;
-	margin-top: 20px;
+.cake {
+  position: relative;
+  width: 200px;
+  height: 200px;
 }
 
 
