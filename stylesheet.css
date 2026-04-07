@@ -1,38 +1,40 @@
+/* --- GLOBAL STYLES --- */
 body {
 	background-color: #000;
-	-webkit-transition:background-color linear 5s;
-	-moz-transition:background-color linear 5s;
-	-o-transition:background-color linear 5s;
-	-ms-transition:background-color linear 5s;
-	transition:background-color linear 5s;
-	overflow-x:hidden;
+	transition: background-color 5s linear;
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
 }
+
 .container {
-	display: none;
+	display: none; /* Controlled by JS */
 }
+
+/* --- BACKGROUND ANIMATIONS --- */
 .peach {
 	background-color: #FFDAB9;
 }
+
 .peach-after {
-	-webkit-animation:peach_alive linear 8s infinite;
-	-moz-animation:peach_alive linear 8s infinite;
-	-o-animation:peach_alive linear 8s infinite;
-	-ms-animation:peach_alive linear 8s infinite;
-	animation:peach_alive linear 8s infinite;
+	animation: peach_alive 8s linear infinite;
 }
 
-@-webkit-keyframes peach_alive { 0%{ background-color: #FFDAB9; } 25%{ background-color: #FFE4B5; } 50%{ background-color: #FFDAB9; } 75%{ background-color: #FFEFD5; } 100%{ background-color: #FFDAB9; } }
-@-moz-keyframes peach_alive { 0%{ background-color: #FFDAB9; } 25%{ background-color: #FFE4B5; } 50%{ background-color: #FFDAB9; } 75%{ background-color: #FFEFD5; } 100%{ background-color: #FFDAB9; } }
-@-o-keyframes peach_alive { 0%{ background-color: #FFDAB9; } 25%{ background-color: #FFE4B5; } 50%{ background-color: #FFDAB9; } 75%{ background-color: #FFEFD5; } 100%{ background-color: #FFDAB9; } }
-@-ms-keyframes peach_alive { 0%{ background-color: #FFDAB9; } 25%{ background-color: #FFE4B5; } 50%{ background-color: #FFDAB9; } 75%{ background-color: #FFEFD5; } 100%{ background-color: #FFDAB9; } }
-@keyframes peach_alive { 0%{ background-color: #FFDAB9; } 25%{ background-color: #FFE4B5; } 50%{ background-color: #FFDAB9; } 75%{ background-color: #FFEFD5; } 100%{ background-color: #FFDAB9; } }
+@keyframes peach_alive { 
+	0% { background-color: #FFDAB9; } 
+	25% { background-color: #FFE4B5; } 
+	50% { background-color: #FFDAB9; } 
+	75% { background-color: #FFEFD5; } 
+	100% { background-color: #FFDAB9; } 
+}
 
+/* --- LIGHT BULBS --- */
 .bulb {
 	width: 50px;
 	height: 50px;
 	margin: auto;
 	background-repeat: no-repeat;
-	background-position:center 0px;
+	background-position: center 0px;
 	background-size: 50px 50px;
 }
 
@@ -40,62 +42,43 @@ body {
 	height: 70px;
 }
 
-/* --- BULB GLOW ANIMATIONS --- */
-.bulb-glow-yellow { background-image: url('bulb_yellow.png'); animation: bulb_glow_yellow linear 5s; }
-@keyframes bulb_glow_yellow { 0%{ background-image: url('bulb.png'); opacity: 0; } 50%{ opacity: 1; } 100%{ background-image: url('bulb_yellow.png'); opacity: 1; } }
+.bulb-glow-yellow { background-image: url('bulb_yellow.png'); animation: bulb_glow_yellow 5s linear; }
+.bulb-glow-red { background-image: url('bulb_red.png'); animation: bulb_glow_red 5s linear; }
+.bulb-glow-blue { background-image: url('bulb_blue.png'); animation: bulb_glow_blue 5s linear; }
+.bulb-glow-green { background-image: url('bulb_green.png'); animation: bulb_glow_green 5s linear; }
+.bulb-glow-pink { background-image: url('bulb_pink.png'); animation: bulb_glow_pink 5s linear; }
+.bulb-glow-orange { background-image: url('bulb_orange.png'); animation: bulb_glow_orange 5s linear; }
 
-.bulb-glow-red { background-image: url('bulb_red.png'); animation: bulb_glow_red linear 5s; }
-@keyframes bulb_glow_red { 0%{ background-image: url('bulb.png'); opacity: 0; } 50%{ opacity: 1; } 100%{ background-image: url('bulb_red.png'); opacity: 1; } }
+@keyframes bulb_glow_yellow { 0%{ opacity: 0; } 50%{ opacity: 1; } 100%{ opacity: 1; } }
 
-.bulb-glow-blue { background-image: url('bulb_blue.png'); animation: bulb_glow_blue linear 5s; }
-@keyframes bulb_glow_blue { 0%{ background-image: url('bulb.png'); opacity: 0; } 50%{ opacity: 1; } 100%{ background-image: url('bulb_blue.png'); opacity: 1; } }
+/* --- BULBS AFTER MUSIC (BLINKING) --- */
+.bulb-glow-yellow-after { animation: bulb_blink 1s linear infinite; background-image: url('bulb_yellow.png'); }
+.bulb-glow-red-after { animation: bulb_blink 1.2s linear infinite; background-image: url('bulb_red.png'); }
+.bulb-glow-blue-after { animation: bulb_blink 1.4s linear infinite; background-image: url('bulb_blue.png'); }
+.bulb-glow-green-after { animation: bulb_blink 1.8s linear infinite; background-image: url('bulb_green.png'); }
+.bulb-glow-pink-after { animation: bulb_blink 2s linear infinite; background-image: url('bulb_pink.png'); }
+.bulb-glow-orange-after { animation: bulb_blink 2.2s linear infinite; background-image: url('bulb_orange.png'); }
 
-.bulb-glow-green { background-image: url('bulb_green.png'); animation: bulb_glow_green linear 5s; }
-@keyframes bulb_glow_green { 0%{ background-image: url('bulb.png'); opacity: 0; } 50%{ opacity: 1; } 100%{ background-image: url('bulb_green.png'); opacity: 1; } }
-
-.bulb-glow-pink { background-image: url('bulb_pink.png'); animation: bulb_glow_pink linear 5s; }
-@keyframes bulb_glow_pink { 0%{ background-image: url('bulb.png'); opacity: 0; } 50%{ opacity: 1; } 100%{ background-image: url('bulb_pink.png'); opacity: 1; } }
-
-.bulb-glow-orange { background-image: url('bulb_orange.png'); animation: bulb_glow_orange linear 5s; }
-@keyframes bulb_glow_orange { 0%{ background-image: url('bulb.png'); opacity: 0; } 50%{ opacity: 1; } 100%{ background-image: url('bulb_orange.png'); opacity: 1; } }
-
-/* --- BULBS AFTER MUSIC --- */
-.bulb-glow-yellow-after { background-image: url('bulb_yellow.png'); animation: bulb_glow_yellow_after linear 1s infinite; }
-@keyframes bulb_glow_yellow_after { 0%{ background-image: url('bulb.png'); } 50%{ background-image: url('bulb_yellow.png'); } 100%{ background-image: url('bulb.png'); } }
-
-.bulb-glow-red-after { background-image: url('bulb_red.png'); animation: bulb_glow_red_after linear 1.2s infinite; }
-@keyframes bulb_glow_red_after { 0%{ background-image: url('bulb.png'); } 50%{ background-image: url('bulb_red.png'); } 100%{ background-image: url('bulb.png'); } }
-
-.bulb-glow-blue-after { background-image: url('bulb_blue.png'); animation: bulb_glow_blue_after linear 1.4s infinite; }
-@keyframes bulb_glow_blue_after { 0%{ background-image: url('bulb.png'); } 50%{ background-image: url('bulb_blue.png'); } 100%{ background-image: url('bulb.png'); } }
-
-.bulb-glow-green-after { background-image: url('bulb_green.png'); animation: bulb_glow_green_after linear 1.8s infinite; }
-@keyframes bulb_glow_green_after { 0%{ background-image: url('bulb.png'); } 50%{ background-image: url('bulb_green.png'); } 100%{ background-image: url('bulb.png'); } }
-
-.bulb-glow-pink-after { background-image: url('bulb_pink.png'); animation: bulb_glow_pink_after linear 2s infinite; }
-@keyframes bulb_glow_pink_after { 0%{ background-image: url('bulb.png'); } 50%{ background-image: url('bulb_pink.png'); } 100%{ background-image: url('bulb.png'); } }
-
-.bulb-glow-orange-after { background-image: url('bulb_orange.png'); animation: bulb_glow_orange_after linear 2.2s infinite; }
-@keyframes bulb_glow_orange_after { 0%{ background-image: url('bulb.png'); } 50%{ background-image: url('bulb_orange.png'); } 100%{ background-image: url('bulb.png'); } }
-
-audio {
-	display: none;
+@keyframes bulb_blink { 
+	0%, 100% { opacity: 1; } 
+	50% { opacity: 0.3; } 
 }
 
 /* --- BANNER --- */
 .bannar {
 	max-width: 100%;
-	transform:translate(0px,-500px);
+	transform: translateY(-500px);
 }
+
 .bannar-come {
-	animation: bannar_come linear 6s;
-	transform:translate(0px,0px);
+	animation: bannar_come 6s linear forwards;
 }
+
 @keyframes bannar_come {
-	0%{ transform:translate(0px,-1000px); }
-	33%{ transform:translate(0px,0px); transform:rotate(10deg); }
-	66%{ transform:translate(0px,100px); transform:rotate(-10deg); }
-	100%{ transform:translate(0px,0px); }
+	0% { transform: translateY(-1000px); }
+	33% { transform: translateY(0px) rotate(10deg); }
+	66% { transform: translateY(100px) rotate(-10deg); }
+	100% { transform: translateY(0px) rotate(0deg); }
 }
 
 /* --- BALLOONS --- */
@@ -108,360 +91,154 @@ audio {
 	height: 183px;
 	background-repeat: no-repeat;
 	background-size: 100px 183px;
-	
-    /* Centers the H2 tags exactly in the middle of the balloon */
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding-bottom: 20%; 
 }
+
 .balloons h2 {
 	text-transform: uppercase;
 	font-family: 'Signika', sans-serif;
 	font-size: 50px;
 	color: #BF4136;
-	text-shadow: 5px 5px 5px #FFF;
+	text-shadow: 2px 2px 5px #FFF;
 	display: none;
 	margin: 0;
 }
 
 #b1,#b11 { background-image: url('b1.png'); }
 #b2,#b22 { background-image: url('b2.png'); }
-#b3,#b33 { background-image: url('b3.png'); }
-#b4,#b44 { background-image: url('b4.png'); }
-#b5,#b55 { background-image: url('b5.png'); }
-#b6,#b66 { background-image: url('b6.png'); }
-#b7,#b77 { background-image: url('b7.png'); }
+#b3,#b33 { background-image: url('b3.png'); left: 35%; }
+#b4,#b44 { background-image: url('b4.png'); left: 45%; }
+#b5,#b55 { background-image: url('b5.png'); left: 55%; }
+#b6,#b66 { background-image: url('b6.png'); left: 65%; }
 
+.balloons-rotate-behaviour-one { animation: balloons_rotate_one 10s linear infinite; }
+.balloons-rotate-behaviour-two { animation: balloons_rotate_two 10s linear infinite; }
 
-/* Cluster the ARYA balloons in the center of the screen (Handles both flying and stationary states) */
-#b3, #b33 { left: 35%; } /* A */
-#b4, #b44 { left: 45%; } /* R */
-#b5, #b55 { left: 55%; } /* Y */
-#b6, #b66 { left: 65%; } /* A */
+@keyframes balloons_rotate_one { 0%, 100% { transform: rotate(30deg); } 50% { transform: rotate(-30deg); } }
+@keyframes balloons_rotate_two { 0%, 100% { transform: rotate(-20deg); } 50% { transform: rotate(20deg); } }
 
-.balloons-rotate-behaviour-one {
-	animation: balloons_rotate_one linear 10s infinite;
-	transform: rotate(30deg);
-}
-@keyframes balloons_rotate_one { 0% { transform: rotate(30deg); } 50% { transform: rotate(-30deg); } 100% { transform: rotate(30deg); } }
-
-.balloons-rotate-behaviour-two {
-	animation: balloons_rotate_two linear 10s infinite;
-	transform: rotate(-20deg);
-}
-@keyframes balloons_rotate_two { 0% { transform: rotate(-20deg); } 50% { transform: rotate(20deg); } 100% { transform: rotate(-20deg); } }
-
-.balloon-border{
-	position: fixed;
-	top:100%;
-	opacity: 0.5;
-	z-index: 9999;
-}
-
-/* --- UI CONTROLS --- */
-.control-panel {
-	position: fixed;
-	bottom: 0;
-	padding:10px 0px 10px 0px;
-}
-#play, #bannar_coming, #balloons_flying, #cake_fadein, #light_candle, #wish_message, #story {
-	display: none;
-}
-
-/* Set Cake to hidden initially */
-/* --- FIX: Cake visibility --- */
+/* --- THE CAKE (FIXED SYNTAX) --- */
 .cake-cover {
 	display: none;
 	margin-top: 50px;
-	min-height: 100px;
 	position: relative;
-	z-index: 9999; /* bring above balloons */
+	z-index: 999;
+	text-align: center;
+	height: 350px;
+}
+
+.cake {
+	position: absolute;
+	display: none;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 300px;
+	height: 300px;
+}
+
+/* Cake Base Plate */
+.cake:after {
+	background: #ffffff;
+	border-radius: 300px;
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 300px;
+	height: 6px; /* Fixed from 300/50 */
+}
+
+/* Sponge Layer */
+.bizcocho {
+	background: #6d3826;
+	position: absolute;
+	bottom: 6px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 150px;
+	height: 100px;
+}
+
+.bizcocho:after, .bizcocho:before {
+	background: rgba(236, 231, 227, 0.6);
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 15px;
+	left: 0;
+}
+.bizcocho:after { top: 30%; }
+.bizcocho:before { top: 60%; }
+
+/* Frosting Layer */
+.cobertura {
+	background: #ece7e3;
+	border-radius: 150px;
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 166px;
+	height: 37px;
+	z-index: 10;
+}
+
+/* Candle */
+.velas {
+	background: #ffffff;
+	border-radius: 10px;
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 15px;
+	height: 50px;
+}
+
+/* Flame */
+.fuego {
+	display: none;
+	border-radius: 100%;
+	position: absolute;
+	top: -15px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 20px;
+	height: 37px;
+	background: rgba(254, 248, 97, 0.8);
+	box-shadow: 0 0 20px 5px rgba(248, 233, 209, 0.5);
+	animation: fuego 1s infinite alternate;
+}
+
+@keyframes fuego {
+	0% { transform: translateX(-50%) scale(1); background: orange; }
+	100% { transform: translateX(-50%) scale(1.2); background: yellow; }
+}
+
+/* --- UI & TEXT --- */
+.message {
+	margin-top: 100px;
+	display: none;
 	text-align: center;
 }
 
-/* ============================================== POSITION
-*/
-.cake {
-  position: absolute;
-  display: none;
-  left: 50%;
-  margin-left: -150px;
-  width: 300px;
-  height: 300px;
-}
-/* ============================================== BASE
-*/
-.cake:after {
-  background: #ffffff;
-  border-radius: 300px;
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 300px;
-  height: 300px/50;
-}
-/* ============================================== Candle
-*/
-.velas {
-  background: #ffffff;
-  border-radius: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -150px/20;
-  margin-top: -150px/6;
-  width: 300px/20;
-  height: 300px/6;
-}
-.velas:after,
-.velas:before {
-  background: rgba(255, 0, 0, 0.4);
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 300px/45;
-}
-.velas:after {
-  top: 25%;
-  left: 0;
-}
-.velas:before {
-  top: 45%;
-  left: 0;
-}
-/* ============================================== Fire
-*/
-.fuego {
-  display: none;
-  border-radius: 100%;
-  box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  margin-left: -150px/15;
-  width: 300px/15;
-  height: 300px/8;
-}
-.fuego:nth-child(1) {
-  -webkit-animation: fuego 2s infinite;
-  -moz-animation: fuego 2s infinite;
-  -o-animation: fuego 2s infinite;
-  -ms-animation: fuego 2s infinite;
-  animation: fuego 2s infinite;
-}
-.fuego:nth-child(2) {
-  -webkit-animation: fuego 1.5s infinite;
-  -moz-animation: fuego 1.5s infinite;
-  -o-animation: fuego 1.5s infinite;
-  -ms-animation: fuego 1.5s infinite;
-  animation: fuego 1.5s infinite;
-}
-.fuego:nth-child(3) {
-  -webkit-animation: fuego 1s infinite;
-  -moz-animation: fuego 1s infinite;
-  -o-animation: fuego 1s infinite;
-  -ms-animation: fuego 1s infinite;
-  animation: fuego 1s infinite;
-}
-.fuego:nth-child(4) {
-  -webkit-animation: fuego 0.5s infinite;
-  -moz-animation: fuego 0.5s infinite;
-  -o-animation: fuego 0.5s infinite;
-  -ms-animation: fuego 0.5s infinite;
-  animation: fuego 0.5s infinite;
-}
-.fuego:nth-child(5) {
-  -webkit-animation: fuego 0.2s infinite;
-  -moz-animation: fuego 0.2s infinite;
-  -o-animation: fuego 0.2s infinite;
-  -ms-animation: fuego 0.2s infinite;
-  animation: fuego 0.2s infinite;
-}
-/* ============================================== Animation Fire
-*/
-@-webkit-keyframes fuego {
-  0% {
-    background: rgba(254, 248, 97, 0.5);
-    -webkit-transform: translateY(0) scale(1);
-  }
-  50% {
-    background: rgba(255, 50, 0, 0.1);
-    -webkit-transform: translateY(-60px) scale(0);
-  }
-  100% {
-    background: rgba(254, 248, 97, 0.5);
-    -webkit-transform: translateY(0) scale(1);
-  }
-}
-@-moz-keyframes fuego {
-  0% {
-    background: rgba(254, 248, 97, 0.5);
-    -moz-transform: translateY(0) scale(1);
-  }
-  50% {
-    background: rgba(255, 50, 0, 0.1);
-    -moz-transform: translateY(-60px) scale(0);
-  }
-  100% {
-    background: rgba(254, 248, 97, 0.5);
-    -moz-transform: translateY(0) scale(1);
-  }
-}
-@-o-keyframes fuego {
-  0% {
-    background: rgba(254, 248, 97, 0.5);
-    -o-transform: translateY(0) scale(1);
-  }
-  50% {
-    background: rgba(255, 50, 0, 0.1);
-    -o-transform: translateY(-60px) scale(0);
-  }
-  100% {
-    background: rgba(254, 248, 97, 0.5);
-    -o-transform: translateY(0) scale(1);
-  }
-}
-@-ms-keyframes fuego {
-  0% {
-    background: rgba(254, 248, 97, 0.5);
-    -ms-transform: translateY(0) scale(1);
-  }
-  50% {
-    background: rgba(255, 50, 0, 0.1);
-    -ms-transform: translateY(-60px) scale(0);
-  }
-  100% {
-    background: rgba(254, 248, 97, 0.5);
-    -ms-transform: translateY(0) scale(1);
-  }
-}
-@keyframes fuego {
-  0% {
-    background: rgba(254, 248, 97, 0.5);
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    background: rgba(255, 50, 0, 0.1);
-    transform: translateY(-60px) scale(0);
-  }
-  100% {
-    background: rgba(254, 248, 97, 0.5);
-    transform: translateY(0) scale(1);
-  }
-}
-/* ============================================== Frosting
-*/
-.cobertura {
-  background: #ece7e3;
-  border-radius: 300px/2;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  margin-left: -150px/1.8;
-  margin-top: -150px/10;
-  width: 300px/1.8;
-  height: 300px/8;
-  z-index: 10;
-}
-.cobertura:after,
-.cobertura:before {
-  background: #ece7e3;
-  border-radius: 300px;
-  content: "";
-  position: absolute;
-  width: 300px/20;
-  height: 300px/10;
-}
-.cobertura:after {
-  top: 300px/15;
-  right: 300px/7;
-}
-.cobertura:before {
-  top: 300px/10;
-  right: 300px/11;
-}
-/* ============================================== BIZCOCHO
-*/
-.bizcocho {
-  background: #6d3826;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  margin-left: -150px/2;
-  width: 300px/2;
-  height: 300px/3;
-}
-.bizcocho:after,
-.bizcocho:before {
-  background: rgba(236, 231, 227, 0.6);
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 300px/20;
-}
-.bizcocho:after {
-  top: 30%;
-  left: 0;
-}
-.bizcocho:before {
-  top: 60%;
-  left: 0;
-}
-/* ============================================== TEXT
-*/
-h1,
-p {
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-  font-style: italic;
-  text-align: center;
-  width: 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-/* --- FLAME ANIMATION --- */
-@keyframes flame {
-  0% {
-    transform: translateX(-50%) scale(1);
-    background: orange;
-  }
-  100% {
-    transform: translateX(-50%) scale(1.2);
-    background: yellow;
-  }
-}
-
-/* --- MESSAGING --- */
-.message {
-	margin-top: 200px;
-	display: none;
-}
 .message p {
 	font-family: 'Signika', sans-serif;
 	font-size: 30px;
-	text-transform: uppercase;
 	color: #C4515C;
 	text-shadow: 2px 2px 2px #FFF;
-	display: none;
-	font-weight: bold;
 }
 
-/* --- BUTTONS --- */
 .btn-primary {
-	border-color: #466baf;
-	padding: 10px;
+	border: none;
+	padding: 15px 30px;
 	text-transform: uppercase;
 	font-family: 'Signika', sans-serif;
 	font-weight: 700;
 	color: #fff;
 	background-color: #466baf;
-}
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
-	border-color: #fff;
-	color: #fff;
-	background-color: #466baf;
+	cursor: pointer;
+	border-radius: 5px;
 }
