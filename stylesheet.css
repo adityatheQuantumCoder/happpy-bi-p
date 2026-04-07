@@ -179,12 +179,16 @@ audio {
 	z-index: 9999; /* bring above balloons */
 	text-align: center;
 }
+
 .cake {
-  position: relative;
+  position: relative;  /* makes it a reference box */
   width: 200px;
-  height: 200px;
+  height: 200px;       /* gives it real size */
 }
 
+.part {
+  position: absolute;  /* allows free placement inside */
+}
 
 /* --- FIX: Fire (candle flame) --- */
 .fuego {
