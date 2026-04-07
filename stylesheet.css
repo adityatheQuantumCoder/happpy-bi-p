@@ -1,5 +1,4 @@
 body {
-	/*background-color: #FFDAB9;	*/
 	background-color: #000;
 	-webkit-transition:background-color linear 5s;
 	-moz-transition:background-color linear 5s;
@@ -22,41 +21,11 @@ body {
 	animation:peach_alive linear 8s infinite;
 }
 
-@-webkit-keyframes peach_alive {
-	0%{ background-color: #FFDAB9; }
-	25%{ background-color: #FFE4B5; }
-	50%{ background-color: #FFDAB9; }
-	75%{ background-color: #FFEFD5; }
-	100%{ background-color: #FFDAB9; }
-}
-@-moz-keyframes peach_alive {
-	0%{ background-color: #FFDAB9; }
-	25%{ background-color: #FFE4B5; }
-	50%{ background-color: #FFDAB9; }
-	75%{ background-color: #FFEFD5; }
-	100%{ background-color: #FFDAB9; }
-}
-@-o-keyframes peach_alive {
-	0%{ background-color: #FFDAB9; }
-	25%{ background-color: #FFE4B5; }
-	50%{ background-color: #FFDAB9; }
-	75%{ background-color: #FFEFD5; }
-	100%{ background-color: #FFDAB9; }
-}
-@-ms-keyframes peach_alive {
-	0%{ background-color: #FFDAB9; }
-	25%{ background-color: #FFE4B5; }
-	50%{ background-color: #FFDAB9; }
-	75%{ background-color: #FFEFD5; }
-	100%{ background-color: #FFDAB9; }
-}
-@keyframes peach_alive {
-	0%{ background-color: #FFDAB9; }
-	25%{ background-color: #FFE4B5; }
-	50%{ background-color: #FFDAB9; }
-	75%{ background-color: #FFEFD5; }
-	100%{ background-color: #FFDAB9; }
-}
+@-webkit-keyframes peach_alive { 0%{ background-color: #FFDAB9; } 25%{ background-color: #FFE4B5; } 50%{ background-color: #FFDAB9; } 75%{ background-color: #FFEFD5; } 100%{ background-color: #FFDAB9; } }
+@-moz-keyframes peach_alive { 0%{ background-color: #FFDAB9; } 25%{ background-color: #FFE4B5; } 50%{ background-color: #FFDAB9; } 75%{ background-color: #FFEFD5; } 100%{ background-color: #FFDAB9; } }
+@-o-keyframes peach_alive { 0%{ background-color: #FFDAB9; } 25%{ background-color: #FFE4B5; } 50%{ background-color: #FFDAB9; } 75%{ background-color: #FFEFD5; } 100%{ background-color: #FFDAB9; } }
+@-ms-keyframes peach_alive { 0%{ background-color: #FFDAB9; } 25%{ background-color: #FFE4B5; } 50%{ background-color: #FFDAB9; } 75%{ background-color: #FFEFD5; } 100%{ background-color: #FFDAB9; } }
+@keyframes peach_alive { 0%{ background-color: #FFDAB9; } 25%{ background-color: #FFE4B5; } 50%{ background-color: #FFDAB9; } 75%{ background-color: #FFEFD5; } 100%{ background-color: #FFDAB9; } }
 
 .bulb {
 	width: 50px;
@@ -72,156 +41,42 @@ body {
 }
 
 /* --- BULB GLOW ANIMATIONS --- */
-.bulb-glow-yellow {
-	background-image: url('bulb_yellow.png');
-	-webkit-animation: bulb_glow_yellow linear 5s;
-	-moz-animation: bulb_glow_yellow linear 5s;
-	-o-animation: bulb_glow_yellow linear 5s;
-	-ms-animation: bulb_glow_yellow linear 5s;
-	animation: bulb_glow_yellow linear 5s;
-}
-@keyframes bulb_glow_yellow {
-	0%{ background-image: url('bulb.png'); opacity: 0; }
-	50%{ opacity: 1; }
-	100%{ background-image: url('bulb_yellow.png'); opacity: 1; }
-}
+.bulb-glow-yellow { background-image: url('bulb_yellow.png'); animation: bulb_glow_yellow linear 5s; }
+@keyframes bulb_glow_yellow { 0%{ background-image: url('bulb.png'); opacity: 0; } 50%{ opacity: 1; } 100%{ background-image: url('bulb_yellow.png'); opacity: 1; } }
 
-.bulb-glow-red {
-	background-image: url('bulb_red.png');
-	-webkit-animation: bulb_glow_red linear 5s;
-	-moz-animation: bulb_glow_red linear 5s;
-	-o-animation: bulb_glow_red linear 5s;
-	-ms-animation: bulb_glow_red linear 5s;
-	animation: bulb_glow_red linear 5s;
-}
-@keyframes bulb_glow_red {
-	0%{ background-image: url('bulb.png'); opacity: 0; }
-	50%{ opacity: 1; }
-	100%{ background-image: url('bulb_red.png'); opacity: 1; }
-}
+.bulb-glow-red { background-image: url('bulb_red.png'); animation: bulb_glow_red linear 5s; }
+@keyframes bulb_glow_red { 0%{ background-image: url('bulb.png'); opacity: 0; } 50%{ opacity: 1; } 100%{ background-image: url('bulb_red.png'); opacity: 1; } }
 
-.bulb-glow-blue {
-	background-image: url('bulb_blue.png');
-	-webkit-animation: bulb_glow_blue linear 5s;
-	-moz-animation: bulb_glow_blue linear 5s;
-	-o-animation: bulb_glow_blue linear 5s;
-	-ms-animation: bulb_glow_blue linear 5s;
-	animation: bulb_glow_blue linear 5s;
-}
-@keyframes bulb_glow_blue {
-	0%{ background-image: url('bulb.png'); opacity: 0; }
-	50%{ opacity: 1; }
-	100%{ background-image: url('bulb_blue.png'); opacity: 1; }
-}
+.bulb-glow-blue { background-image: url('bulb_blue.png'); animation: bulb_glow_blue linear 5s; }
+@keyframes bulb_glow_blue { 0%{ background-image: url('bulb.png'); opacity: 0; } 50%{ opacity: 1; } 100%{ background-image: url('bulb_blue.png'); opacity: 1; } }
 
-.bulb-glow-green {
-	background-image: url('bulb_green.png');
-	-webkit-animation: bulb_glow_green linear 5s;
-	-moz-animation: bulb_glow_green linear 5s;
-	-o-animation: bulb_glow_green linear 5s;
-	-ms-animation: bulb_glow_green linear 5s;
-	animation: bulb_glow_green linear 5s;
-}
-@keyframes bulb_glow_green {
-	0%{ background-image: url('bulb.png'); opacity: 0; }
-	50%{ opacity: 1; }
-	100%{ background-image: url('bulb_green.png'); opacity: 1; }
-}
+.bulb-glow-green { background-image: url('bulb_green.png'); animation: bulb_glow_green linear 5s; }
+@keyframes bulb_glow_green { 0%{ background-image: url('bulb.png'); opacity: 0; } 50%{ opacity: 1; } 100%{ background-image: url('bulb_green.png'); opacity: 1; } }
 
-.bulb-glow-pink {
-	background-image: url('bulb_pink.png');
-	-webkit-animation: bulb_glow_pink linear 5s;
-	-moz-animation: bulb_glow_pink linear 5s;
-	-o-animation: bulb_glow_pink linear 5s;
-	-ms-animation: bulb_glow_pink linear 5s;
-	animation: bulb_glow_pink linear 5s;
-}
-@keyframes bulb_glow_pink {
-	0%{ background-image: url('bulb.png'); opacity: 0; }
-	50%{ opacity: 1; }
-	100%{ background-image: url('bulb_pink.png'); opacity: 1; }
-}
+.bulb-glow-pink { background-image: url('bulb_pink.png'); animation: bulb_glow_pink linear 5s; }
+@keyframes bulb_glow_pink { 0%{ background-image: url('bulb.png'); opacity: 0; } 50%{ opacity: 1; } 100%{ background-image: url('bulb_pink.png'); opacity: 1; } }
 
-.bulb-glow-orange {
-	background-image: url('bulb_orange.png');
-	-webkit-animation: bulb_glow_orange linear 5s;
-	-moz-animation: bulb_glow_orange linear 5s;
-	-o-animation: bulb_glow_orange linear 5s;
-	-ms-animation: bulb_glow_orange linear 5s;
-	animation: bulb_glow_orange linear 5s;
-}
-@keyframes bulb_glow_orange {
-	0%{ background-image: url('bulb.png'); opacity: 0; }
-	50%{ opacity: 1; }
-	100%{ background-image: url('bulb_orange.png'); opacity: 1; }
-}
+.bulb-glow-orange { background-image: url('bulb_orange.png'); animation: bulb_glow_orange linear 5s; }
+@keyframes bulb_glow_orange { 0%{ background-image: url('bulb.png'); opacity: 0; } 50%{ opacity: 1; } 100%{ background-image: url('bulb_orange.png'); opacity: 1; } }
 
 /* --- BULBS AFTER MUSIC --- */
-.bulb-glow-yellow-after {
-	background-image: url('bulb_yellow.png');
-	-webkit-animation: bulb_glow_yellow_after linear 1s infinite;
-	animation: bulb_glow_yellow_after linear 1s infinite;
-}
-@keyframes bulb_glow_yellow_after {
-	0%{ background-image: url('bulb.png'); }
-	50%{ background-image: url('bulb_yellow.png'); }
-	100%{ background-image: url('bulb.png'); }
-}
+.bulb-glow-yellow-after { background-image: url('bulb_yellow.png'); animation: bulb_glow_yellow_after linear 1s infinite; }
+@keyframes bulb_glow_yellow_after { 0%{ background-image: url('bulb.png'); } 50%{ background-image: url('bulb_yellow.png'); } 100%{ background-image: url('bulb.png'); } }
 
-.bulb-glow-red-after {
-	background-image: url('bulb_red.png');
-	-webkit-animation: bulb_glow_red_after linear 1.2s infinite;
-	animation: bulb_glow_red_after linear 1.2s infinite;
-}
-@keyframes bulb_glow_red_after {
-	0%{ background-image: url('bulb.png'); }
-	50%{ background-image: url('bulb_red.png'); }
-	100%{ background-image: url('bulb.png'); }
-}
+.bulb-glow-red-after { background-image: url('bulb_red.png'); animation: bulb_glow_red_after linear 1.2s infinite; }
+@keyframes bulb_glow_red_after { 0%{ background-image: url('bulb.png'); } 50%{ background-image: url('bulb_red.png'); } 100%{ background-image: url('bulb.png'); } }
 
-.bulb-glow-blue-after {
-	background-image: url('bulb_blue.png');
-	-webkit-animation: bulb_glow_blue_after linear 1.4s infinite;
-	animation: bulb_glow_blue_after linear 1.4s infinite;
-}
-@keyframes bulb_glow_blue_after {
-	0%{ background-image: url('bulb.png'); }
-	50%{ background-image: url('bulb_blue.png'); }
-	100%{ background-image: url('bulb.png'); }
-}
+.bulb-glow-blue-after { background-image: url('bulb_blue.png'); animation: bulb_glow_blue_after linear 1.4s infinite; }
+@keyframes bulb_glow_blue_after { 0%{ background-image: url('bulb.png'); } 50%{ background-image: url('bulb_blue.png'); } 100%{ background-image: url('bulb.png'); } }
 
-.bulb-glow-green-after {
-	background-image: url('bulb_green.png');
-	-webkit-animation: bulb_glow_green_after linear 1.8s infinite;
-	animation: bulb_glow_green_after linear 1.8s infinite;
-}
-@keyframes bulb_glow_green_after {
-	0%{ background-image: url('bulb.png'); }
-	50%{ background-image: url('bulb_green.png'); }
-	100%{ background-image: url('bulb.png'); }
-}
+.bulb-glow-green-after { background-image: url('bulb_green.png'); animation: bulb_glow_green_after linear 1.8s infinite; }
+@keyframes bulb_glow_green_after { 0%{ background-image: url('bulb.png'); } 50%{ background-image: url('bulb_green.png'); } 100%{ background-image: url('bulb.png'); } }
 
-.bulb-glow-pink-after {
-	background-image: url('bulb_pink.png');
-	-webkit-animation: bulb_glow_pink_after linear 2s infinite;
-	animation: bulb_glow_pink_after linear 2s infinite;
-}
-@keyframes bulb_glow_pink_after {
-	0%{ background-image: url('bulb.png'); }
-	50%{ background-image: url('bulb_pink.png'); }
-	100%{ background-image: url('bulb.png'); }
-}
+.bulb-glow-pink-after { background-image: url('bulb_pink.png'); animation: bulb_glow_pink_after linear 2s infinite; }
+@keyframes bulb_glow_pink_after { 0%{ background-image: url('bulb.png'); } 50%{ background-image: url('bulb_pink.png'); } 100%{ background-image: url('bulb.png'); } }
 
-.bulb-glow-orange-after {
-	background-image: url('bulb_orange.png');
-	-webkit-animation: bulb_glow_orange_after linear 2.2s infinite;
-	animation: bulb_glow_orange_after linear 2.2s infinite;
-}
-@keyframes bulb_glow_orange_after {
-	0%{ background-image: url('bulb.png'); }
-	50%{ background-image: url('bulb_orange.png'); }
-	100%{ background-image: url('bulb.png'); }
-}
+.bulb-glow-orange-after { background-image: url('bulb_orange.png'); animation: bulb_glow_orange_after linear 2.2s infinite; }
+@keyframes bulb_glow_orange_after { 0%{ background-image: url('bulb.png'); } 50%{ background-image: url('bulb_orange.png'); } 100%{ background-image: url('bulb.png'); } }
 
 audio {
 	display: none;
@@ -233,7 +88,6 @@ audio {
 	transform:translate(0px,-500px);
 }
 .bannar-come {
-	-webkit-animation: bannar_come linear 6s;
 	animation: bannar_come linear 6s;
 	transform:translate(0px,0px);
 }
@@ -244,7 +98,7 @@ audio {
 	100%{ transform:translate(0px,0px); }
 }
 
-/* --- BALLOONS (UPDATED TO CENTER TEXT) --- */
+/* --- BALLOONS --- */
 .balloons {
 	position: fixed;
 	bottom: -200px;
@@ -255,11 +109,11 @@ audio {
 	background-repeat: no-repeat;
 	background-size: 100px 183px;
 	
-    /* FIX 1: Flexbox centers the H2 tags exactly in the middle of the balloon */
+    /* Centers the H2 tags exactly in the middle of the balloon */
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding-bottom: 20px; 
+	padding-bottom: 20%; 
 }
 .balloons h2 {
 	text-transform: uppercase;
@@ -268,10 +122,9 @@ audio {
 	color: #BF4136;
 	text-shadow: 5px 5px 5px #FFF;
 	display: none;
-	margin: 0; /* Reset margins to help flexbox alignment */
+	margin: 0;
 }
 
-/* Balloon Images */
 #b1,#b11 { background-image: url('b1.png'); }
 #b2,#b22 { background-image: url('b2.png'); }
 #b3,#b33 { background-image: url('b3.png'); }
@@ -280,34 +133,23 @@ audio {
 #b6,#b66 { background-image: url('b6.png'); }
 #b7,#b77 { background-image: url('b7.png'); }
 
-/* FIX 2: Cluster the specific balloons in the center of the screen */
+/* Cluster the ARYA balloons in the center of the screen */
 #b3 { left: 35%; } /* A */
 #b4 { left: 45%; } /* R */
 #b5 { left: 55%; } /* Y */
 #b6 { left: 65%; } /* A */
 
-/* --- BALLOON ROTATIONS --- */
 .balloons-rotate-behaviour-one {
-	-webkit-animation: balloons_rotate_one linear 10s infinite;
 	animation: balloons_rotate_one linear 10s infinite;
 	transform: rotate(30deg);
 }
-@keyframes balloons_rotate_one {
-	0% { transform: rotate(30deg); }
-	50% { transform: rotate(-30deg); }
-	100% { transform: rotate(30deg); }
-}
+@keyframes balloons_rotate_one { 0% { transform: rotate(30deg); } 50% { transform: rotate(-30deg); } 100% { transform: rotate(30deg); } }
 
 .balloons-rotate-behaviour-two {
-	-webkit-animation: balloons_rotate_two linear 10s infinite;
 	animation: balloons_rotate_two linear 10s infinite;
 	transform: rotate(-20deg);
 }
-@keyframes balloons_rotate_two {
-	0% { transform: rotate(-20deg); }
-	50% { transform: rotate(20deg); }
-	100% { transform: rotate(-20deg); }
-}
+@keyframes balloons_rotate_two { 0% { transform: rotate(-20deg); } 50% { transform: rotate(20deg); } 100% { transform: rotate(-20deg); } }
 
 .balloon-border{
 	position: fixed;
@@ -326,7 +168,7 @@ audio {
 	display: none;
 }
 
-/* FIX 3: Set Cake to hidden initially */
+/* Set Cake to hidden initially */
 .cake-cover {
 	display: none; 
 	margin-top: 50px;
@@ -357,19 +199,8 @@ audio {
 	color: #fff;
 	background-color: #466baf;
 }
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active,
-.btn-primary.active,
-.open .dropdown-toggle.btn-primary {
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
 	border-color: #fff;
 	color: #fff;
 	background-color: #466baf;
 }
-
-/*controlling tablet width*/
-/*@media only screen and (max-width: 720px){
-	.container {
-		-webkit-transform: scale(0.9);
-	}
-}*/
