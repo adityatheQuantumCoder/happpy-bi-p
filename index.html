@@ -9,38 +9,6 @@
     <link href='https://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
     
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    
-    <style>
-        .cake-cover {
-            display: none;
-            margin-top: 50px;
-        }
-    </style>
-    <style>
-        /* 1. Center the text perfectly inside the balloon */
-        .balloons {
-            position: absolute;
-            display: flex;
-            justify-content: center; /* Centers the text horizontally */
-            align-items: center;     /* Centers the text vertically */
-            padding-bottom: 20%;     /* Pushes text up slightly so it sits in the round belly, not the tail */
-        }
-        
-        /* 2. Style the letters so they are bold and visible */
-        .balloons h2 {
-            margin: 0;
-            font-size: 50px; /* Adjust this if the letters are too big/small */
-            font-family: 'Signika', sans-serif;
-            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8); /* Adds a subtle glow so letters stand out against the balloon color */
-        }
-
-        /* 3. Line the balloons up in a neat row from left to right */
-       /* 3. Force balloons to stay clustered in the center, overriding JS */
-#b3 { left: 35% !important; } /* A */
-#b4 { left: 45% !important; } /* R */
-#b5 { left: 55% !important; } /* Y */
-#b6 { left: 65% !important; } /* A */
-    </style>
 </head>
 
 <body>
@@ -49,6 +17,9 @@
         Your browser isn't invited for super fun audio time.
     </audio>
     
+    <div class="balloons text-center" id="b1"></div>
+    <div class="balloons text-center" id="b2"></div>
+
     <div class="balloons text-center" id="b3">
         <h2 style="color:#D14D39;">A</h2>
     </div>
@@ -62,6 +33,8 @@
         <h2 style="color:#99C96A;">A</h2>
     </div>
     
+    <div class="balloons text-center" id="b7"></div>
+
     <img src="Balloon-Border.png" width="100%" class="balloon-border">
 
     <div class="container">
@@ -139,16 +112,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    
     <script src="effect.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            // Unbind any previous clicks to prevent duplicate actions, then add the new one
-            $('#cake_fadein').off('click').on('click', function() {
-                $('.cake-cover').fadeIn('slow');
-            });
-        });
-    </script>
 </body>
 </html>
