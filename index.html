@@ -16,6 +16,30 @@
             margin-top: 50px;
         }
     </style>
+    <style>
+        /* 1. Center the text perfectly inside the balloon */
+        .balloons {
+            position: absolute;
+            display: flex;
+            justify-content: center; /* Centers the text horizontally */
+            align-items: center;     /* Centers the text vertically */
+            padding-bottom: 20%;     /* Pushes text up slightly so it sits in the round belly, not the tail */
+        }
+        
+        /* 2. Style the letters so they are bold and visible */
+        .balloons h2 {
+            margin: 0;
+            font-size: 50px; /* Adjust this if the letters are too big/small */
+            font-family: 'Signika', sans-serif;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8); /* Adds a subtle glow so letters stand out against the balloon color */
+        }
+
+        /* 3. Line the balloons up in a neat row from left to right */
+        #b3 { left: 20%; } /* A */
+        #b4 { left: 40%; } /* R */
+        #b5 { left: 60%; } /* Y */
+        #b6 { left: 80%; } /* A */
+    </style>
 </head>
 
 <body>
