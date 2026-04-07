@@ -3,13 +3,7 @@
 <head>
     <title>Happy Birthday</title>
     <meta charset="UTF-8" />
-    <meta name="description" content="Happy Birthday Xola">
-    <meta name="robots" content="index, follow" />
-    <link rel="author" href="https://plus.google.com/u/1/+AyushSharma1/" /> 
-    <meta name="keywords" content="Birthday, Happy">
-    <meta property="og:type" content="E-Greeting" />
-    <meta property="og:image" content="favicon.ico" />
-    <meta property="og:description" content="Wish you a very Happy Birthday">
+    <meta name="description" content="Happy Birthday">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -18,22 +12,83 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <link href='https://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
+    
     <link rel="stylesheet/less" href="cake.less">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.1.0/less.min.js"></script>
 
     <style>
-        .cake-cover {
-            min-height: 300px; /* Reserves space so the container doesn't collapse */
-            display: flex;
-            justify-content: center;
-            align-items: flex-end; /* Keeps the cake grounded at the bottom of the container */
-            margin-top: 50px;
+        /* Mobile-First Body Setup */
+        body, html {
+            overflow-x: hidden; /* Prevents side-scrolling on mobile */
+            width: 100%;
         }
 
+        .container {
+            padding: 0 15px;
+        }
+
+        /* 1. Horizontal Balloons Fix */
+        .balloon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px; /* Space between the letters */
+            margin-top: 20px;
+            width: 100%;
+            z-index: 10;
+            position: relative;
+        }
+
+        .balloon-container .balloons {
+            position: relative; /* Overrides the old absolute positioning */
+            display: inline-block;
+            opacity: 1 !important; /* Forces them to be visible */
+        }
+
+        /* 2. Cake Centering and Height */
+        .cake-cover {
+            min-height: 300px; /* Prevents the row from collapsing to 0 height */
+            display: flex;
+            justify-content: center;
+            align-items: flex-end; /* Grounds the cake at the bottom */
+            margin-top: 5vh;
+            width: 100%;
+        }
+
+        /* 3. Cake Transition Animation (Mobile size) */
         .cake {
             position: relative;
-            min-height: 200px; 
-            min-width: 200px;
+            display: block !important; 
+            opacity: 0; 
+            transform: scale(0.6) translateY(100px); /* Scaled down for mobile and pushed down */
+            animation: slideCakeIn 2s ease-out forwards; /* Triggers the slide-up effect */
+        }
+
+        @keyframes slideCakeIn {
+            to {
+                opacity: 1;
+                transform: scale(0.6) translateY(0); /* Ends in the center */
+            }
+        }
+
+        /* Desktop/Tablet Scaling (Screens wider than 768px) */
+        @media (min-width: 768px) {
+            .cake-cover {
+                min-height: 400px;
+            }
+            .cake {
+                transform: scale(1) translateY(100px); /* Normal size for larger screens */
+                animation: slideCakeInDesktop 2s ease-out forwards;
+            }
+            @keyframes slideCakeInDesktop {
+                to {
+                    opacity: 1;
+                    transform: scale(1) translateY(0);
+                }
+            }
+            .balloon-container {
+                gap: 30px; /* Wider spacing for desktop */
+            }
         }
     </style>
 </head>
@@ -44,26 +99,19 @@
         Your browser isn't invited for super fun audio time.
     </audio>
     
-    <div class="balloons text-center" id="b1">
-        <h2 style="color:#F2B300;">~</h2>
-    </div>
-    <div class="balloons text-center" id="b2">
-        <h2 style="color:#0719D4;">~</h2>
-    </div>
-    <div class="balloons text-center" id="b3">
-        <h2 style="color:#D14D39;">A</h2>
-    </div>
-    <div class="balloons text-center" id="b4">
-        <h2 style="color:#8FAD00;">R</h2>
-    </div>
-    <div class="balloons text-center" id="b5">
-        <h2 style="color:#8377E4;">Y</h2>
-    </div>
-    <div class="balloons text-center" id="b6">
-        <h2 style="color:#99C96A;">A</h2>
-    </div>
-    <div class="balloons text-center" id="b7">
-        <h2 style="color:#20CFB4;">~</h2>
+    <div class="balloon-container text-center">
+        <div class="balloons" id="b3">
+            <h2 style="color:#D14D39;">A</h2>
+        </div>
+        <div class="balloons" id="b4">
+            <h2 style="color:#8FAD00;">R</h2>
+        </div>
+        <div class="balloons" id="b5">
+            <h2 style="color:#8377E4;">Y</h2>
+        </div>
+        <div class="balloons" id="b6">
+            <h2 style="color:#99C96A;">A</h2>
+        </div>
     </div>
 
     <img src="Balloon-Border.png" width="100%" class="balloon-border">
@@ -71,24 +119,12 @@
     <div class="container">
         
         <div class="row">
-            <div class="col-md-2 col-xs-2 bulb-holder">
-                <div class="bulb" id="bulb_yellow"></div>
-            </div>
-            <div class="col-md-2 col-xs-2 bulb-holder">
-                <div class="bulb" id="bulb_red"></div>
-            </div>
-            <div class="col-md-2 col-xs-2 bulb-holder">
-                <div class="bulb" id="bulb_blue"></div>
-            </div>
-            <div class="col-md-2 col-xs-2 bulb-holder">
-                <div class="bulb" id="bulb_green"></div>
-            </div>
-            <div class="col-md-2 col-xs-2 bulb-holder">
-                <div class="bulb" id="bulb_pink"></div>
-            </div>
-            <div class="col-md-2 col-xs-2 bulb-holder">
-                <div class="bulb" id="bulb_orange"></div>
-            </div>
+            <div class="col-md-2 col-xs-2 bulb-holder"><div class="bulb" id="bulb_yellow"></div></div>
+            <div class="col-md-2 col-xs-2 bulb-holder"><div class="bulb" id="bulb_red"></div></div>
+            <div class="col-md-2 col-xs-2 bulb-holder"><div class="bulb" id="bulb_blue"></div></div>
+            <div class="col-md-2 col-xs-2 bulb-holder"><div class="bulb" id="bulb_green"></div></div>
+            <div class="col-md-2 col-xs-2 bulb-holder"><div class="bulb" id="bulb_pink"></div></div>
+            <div class="col-md-2 col-xs-2 bulb-holder"><div class="bulb" id="bulb_orange"></div></div>
         </div>
         
         <div class="row">
@@ -137,7 +173,7 @@
                 <p>I wish you all the best</p>
                 <p>May your life be at ease</p>
                 <p>May all your wishes come true</p>
-            </div>
+            </div> 
         </div> 
 
         <div class="navbar navbar-fixed-bottom">
@@ -160,14 +196,5 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <script src="effect.js"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-58229732-1', 'auto');
-  ga('send', 'pageview');
-</script>
 </body>
 </html>
