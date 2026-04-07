@@ -133,11 +133,12 @@ audio {
 #b6,#b66 { background-image: url('b6.png'); }
 #b7,#b77 { background-image: url('b7.png'); }
 
-/* Cluster the ARYA balloons in the center of the screen */
-#b3 { left: 35%; } /* A */
-#b4 { left: 45%; } /* R */
-#b5 { left: 55%; } /* Y */
-#b6 { left: 65%; } /* A */
+
+/* Cluster the ARYA balloons in the center of the screen (Handles both flying and stationary states) */
+#b3, #b33 { left: 35%; } /* A */
+#b4, #b44 { left: 45%; } /* R */
+#b5, #b55 { left: 55%; } /* Y */
+#b6, #b66 { left: 65%; } /* A */
 
 .balloons-rotate-behaviour-one {
 	animation: balloons_rotate_one linear 10s infinite;
