@@ -6,17 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <link href='https://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
     
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    
-    <style>
-        .cake-cover {
-            display: none;
-            margin-top: 50px;
-        }
-    </style>
-</head>
+    </head>
 
 <body>
     <audio class="song" controls loop>
@@ -24,6 +17,12 @@
         Your browser isn't invited for super fun audio time.
     </audio>
     
+    <div class="balloons text-center" id="b1">
+        <h2 style="color:#F2B300;">~</h2>
+    </div>
+    <div class="balloons text-center" id="b2">
+        <h2 style="color:#0719D4;">~</h2>
+    </div>
     <div class="balloons text-center" id="b3">
         <h2 style="color:#D14D39;">A</h2>
     </div>
@@ -36,7 +35,10 @@
     <div class="balloons text-center" id="b6">
         <h2 style="color:#99C96A;">A</h2>
     </div>
-    
+    <div class="balloons text-center" id="b7">
+        <h2 style="color:#20CFB4;">~</h2>
+    </div>
+
     <img src="Balloon-Border.png" width="100%" class="balloon-border">
 
     <div class="container">
@@ -114,16 +116,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    
     <script src="effect.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            // Unbind any previous clicks to prevent duplicate actions, then add the new one
-            $('#cake_fadein').off('click').on('click', function() {
-                $('.cake-cover').fadeIn('slow');
-            });
-        });
-    </script>
 </body>
 </html>
