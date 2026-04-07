@@ -170,10 +170,29 @@ audio {
 }
 
 /* Set Cake to hidden initially */
+/* --- FIX: Cake visibility --- */
 .cake-cover {
-	display: none; 
+	display: none;
 	margin-top: 50px;
-	min-height:100px;
+	min-height: 100px;
+	position: relative;
+	z-index: 9999; /* bring above balloons */
+	text-align: center;
+}
+
+#light_candle {
+	display: none;
+	position: relative;
+	z-index: 10000;
+	margin-top: 20px;
+}
+
+
+/* --- FIX: Fire (candle flame) --- */
+.fuego {
+	display: none;
+	position: relative;
+	z-index: 10001;
 }
 
 /* --- MESSAGING --- */
